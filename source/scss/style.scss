@@ -92,16 +92,31 @@ html {
     color: #222;
 }
 
+$desktop: 900px;
+
 .container {
     max-width: 1240px;
     margin: auto;
+
+    @media(max-width: $desktop) {
+        padding: 0 20px;
+    }
 }
+
+
 
 %btn {
     padding: 13px 40px;
     font-size: 16px;
     border-radius: 20px;
     text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background: black;
+        color: white;
+        transition-duration: 0.3s;
+    }
 }
 
 input {
@@ -157,6 +172,10 @@ input {
         align-items: center;
         justify-content: end;
         gap: 50px;
+
+        @media(max-width: $desktop) {
+            display: none;
+        }
     }
 
     .login {
@@ -180,6 +199,7 @@ input {
     .text {
         text-align: center;
         font-size: 13px;
+        letter-spacing: 1px;
     }
 }
 
@@ -197,6 +217,11 @@ input {
         display: grid;
         grid-template-columns: 1.5fr 0.5fr;
         gap: 100px;
+
+        @media(max-width: $desktop) {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
     }
 
     .title {
@@ -271,6 +296,10 @@ input {
             width: 100%;
             border: 1px solid #222;
             @extend %btn;
+        }
+
+        @media(max-width: $desktop) {
+            grid-template-columns: 1fr;
         }
     }
 }

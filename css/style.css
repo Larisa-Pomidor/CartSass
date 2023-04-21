@@ -95,12 +95,24 @@ html {
   max-width: 1240px;
   margin: auto;
 }
+@media (max-width: 900px) {
+  .container {
+    padding: 0 20px;
+  }
+}
 
 .form .form-check, .form .form-btn, .cart .btn-block .cart-btn {
   padding: 13px 40px;
   font-size: 16px;
   border-radius: 20px;
   text-align: center;
+  cursor: pointer;
+}
+.form .form-check:hover, .form .form-btn:hover, .cart .btn-block .cart-btn:hover {
+  background: black;
+  color: white;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 input {
@@ -164,6 +176,11 @@ input {
           justify-content: end;
   gap: 50px;
 }
+@media (max-width: 900px) {
+  .header .controller {
+    display: none;
+  }
+}
 .header .login {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,6 +206,7 @@ input {
 .nav .text {
   text-align: center;
   font-size: 13px;
+  letter-spacing: 1px;
 }
 
 .cart .item-close {
@@ -204,6 +222,13 @@ input {
   -ms-grid-columns: 1.5fr 100px 0.5fr;
   grid-template-columns: 1.5fr 0.5fr;
   gap: 100px;
+}
+@media (max-width: 900px) {
+  .cart .inner {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 .cart .title {
   font-size: 24px;
@@ -287,6 +312,12 @@ input {
 .cart .btn-block .cart-btn {
   width: 100%;
   border: 1px solid #222;
+}
+@media (max-width: 900px) {
+  .cart .btn-block {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 .form {
